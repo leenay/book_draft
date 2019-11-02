@@ -8,22 +8,25 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace book_draft.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase
     {
         // GET: api/Customer
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Customer> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new List<Customer> {
+                new Customer { Id = 1, FirstName = "FirstName1", MiddleName = "MidName1", LastName="LastName1"},
+                new Customer { Id = 2, FirstName = "FirstName2", MiddleName = "MidName2", LastName="LastName2"},
+            };
         }
 
         // GET: api/Customer/5
         [HttpGet("{id}", Name = "Get")]
         public Customer Get(int id)
         {
-            return new Customer { Id = id, FirstName = "Luke", LastName = "Naylor", MiddleName = "Lee" };
+            return new Customer { Id = id, FirstName = "FirstGetName", LastName = "LastGetName", MiddleName = "MidGetName" };
         }
 
         // POST: api/Customer
