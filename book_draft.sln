@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "book_draft", "book_draft\book_draft.csproj", "{304526F9-D48F-4C46-8F8E-423D78D134FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "book_draft.data", "book_draft.data\book_draft.data.csproj", "{35BEEA3E-E27D-4806-A82A-3EFDA75E0180}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "book_draft.data", "book_draft.data\book_draft.data.csproj", "{35BEEA3E-E27D-4806-A82A-3EFDA75E0180}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

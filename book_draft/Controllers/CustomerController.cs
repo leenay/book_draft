@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using book_draft.Models;
+using book_draft.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,6 +13,12 @@ namespace book_draft.Controllers
     [ApiController]
     public class CustomerController : ControllerBase
     {
+        private ICustomerService _customerService;
+        public CustomerController(ICustomerService customerService)
+        {
+            _customerService = customerService;
+        }
+
         // GET: api/Customer
         [HttpGet]
         public IEnumerable<Customer> Get()
@@ -31,8 +38,11 @@ namespace book_draft.Controllers
 
         // POST: api/Customer
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<ActionResult<Customer>> PostAsync(Customer customer)
         {
+            await _customerService.AddCustomerAsync(customer);
+
+            return Ok("Customer created successfully");
         }
 
         // PUT: api/Customer/5
