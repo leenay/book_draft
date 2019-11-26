@@ -2,10 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using book_draft.data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -31,6 +33,8 @@ namespace book_draft
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Demo API", Version = "v1" });
             });
+            services.AddDbContext<BankContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("BankContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
