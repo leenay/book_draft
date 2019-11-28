@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using book_draft.data;
+using book_draft.data.DataAccess;
+using book_draft.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -35,6 +37,9 @@ namespace book_draft
             });
             services.AddDbContext<BankContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("BankContext")));
+
+            services.AddTransient<IBankRepo, BankRepo>();
+            services.AddTransient<ICustomerService, CustomerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
