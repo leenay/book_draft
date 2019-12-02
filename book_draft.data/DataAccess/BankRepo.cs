@@ -17,6 +17,7 @@ namespace book_draft.data.DataAccess
         }
         public async Task AddCustomerAsync(Customer customer)
         {
+            customer.MiddleName = "AAA";
             _context.Customers.Add(customer);
             await _context.SaveChangesAsync();
         }

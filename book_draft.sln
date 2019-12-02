@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "book_draft.domain", "book_d
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "book_draft.data", "book_draft.data\book_draft.data.csproj", "{1DD13CBC-8B2B-4C95-BBC4-07CF3E0CC6C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "book_draft.tests", "book_draft.tests\book_draft.tests.csproj", "{C4BB32C7-74AA-4168-94AB-D6CD4A91AEE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1DD13CBC-8B2B-4C95-BBC4-07CF3E0CC6C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DD13CBC-8B2B-4C95-BBC4-07CF3E0CC6C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DD13CBC-8B2B-4C95-BBC4-07CF3E0CC6C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4BB32C7-74AA-4168-94AB-D6CD4A91AEE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4BB32C7-74AA-4168-94AB-D6CD4A91AEE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4BB32C7-74AA-4168-94AB-D6CD4A91AEE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4BB32C7-74AA-4168-94AB-D6CD4A91AEE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
